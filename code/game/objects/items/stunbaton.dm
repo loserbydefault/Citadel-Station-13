@@ -13,11 +13,11 @@
 	armor = list("melee" = 0, "bullet" = 0, "laser" = 0, "energy" = 0, "bomb" = 50, "bio" = 0, "rad" = 0, "fire" = 80, "acid" = 80)
 
 	var/stunforce = 40		//CITADEL EDIT							-- How much stamina damage is applied on hit.
-	var/stamina_paralysis_threshold = 65		//CITADEL EDIT		-- This is how much stamina they have to have after applying stunforce for the baton to force drop their items and knock them down.
+	var/stamina_paralysis_threshold = 70		//CITADEL EDIT		-- This is how much stamina they have to have after applying stunforce for the baton to force drop their items and knock them down.
 
 	var/status = 0
 	var/obj/item/stock_parts/cell/cell
-	var/hitcost = 1000
+	var/hitcost = 10000
 	var/throw_hit_chance = 35
 	var/preload_cell_type //if not empty the baton starts with this type of cell
 
@@ -44,7 +44,7 @@
 		baton_stun(hit_atom)
 
 /obj/item/melee/baton/loaded //this one starts with a cell pre-installed.
-	preload_cell_type = /obj/item/stock_parts/cell/high
+	preload_cell_type = /obj/item/stock_parts/cell/high/plus				//CITADEL EDIT
 
 /obj/item/melee/baton/proc/deductcharge(chrgdeductamt)
 	if(cell)

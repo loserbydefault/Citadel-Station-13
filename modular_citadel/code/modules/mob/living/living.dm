@@ -4,6 +4,9 @@
 	var/bufferedstam = 0
 	var/stambuffer = 20
 	var/stambufferregentime
+	var/last_sprint_calculation = 0
+	var/sprint_buffer = 30
+	var/sprint_buffer_regen = 0.15		//amount of it that regenerates per second.
 	var/attemptingstandup = FALSE
 	var/intentionalresting = FALSE
 	var/attemptingcrawl = FALSE
