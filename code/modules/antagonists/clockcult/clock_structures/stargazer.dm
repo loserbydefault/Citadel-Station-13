@@ -1,5 +1,5 @@
 #define STARGAZER_RANGE 3 //How many tiles the stargazer can see out to
-#define STARGAZER_POWER 7 //How many watts will be produced per second when the stargazer sees starlight
+#define STARGAZER_POWER 5 //How many watts will be produced per second when the stargazer sees starlight
 
 //Stargazer: A very fragile but cheap generator that creates power from starlight.
 /obj/structure/destructible/clockwork/stargazer
@@ -8,7 +8,7 @@
 	clockwork_desc = "A lantern-shaped generator that produces power when near starlight."
 	icon_state = "stargazer"
 	unanchored_icon = "stargazer_unwrenched"
-	max_integrity = 40
+	max_integrity = 10
 	construction_value = 5
 	layer = WALL_OBJ_LAYER
 	break_message = "<span class='warning'>The stargazer's fragile body shatters into pieces!</span>"
